@@ -1,0 +1,15 @@
+.search-bar {
+  padding: 25px 10px;
+}
+
+.search-bar__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.search-bar__content-input{
+  padding-left: 15px;
+  font-size: 25px;
+  justify-content: center;
+}

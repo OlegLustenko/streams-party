@@ -1,0 +1,15 @@
+{
+  "name": "streams-party",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:OlegLustenko/streams-party.git",
+  "author": "Oleg Lustenko <oleglustenko@gmail.com>",
+  "license": "MIT",
+  "prettier": {
+    "singleQuote": true,
+    "jsxBracketSameLine": true,
+    "arrowParens": "always",
+    "bracketSpacing": false,
+    "trailingComma": "all"
+  }
+}
