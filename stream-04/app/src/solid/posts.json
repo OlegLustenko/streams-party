@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Title Name #1",
+    "body": "Body of post",
+    "postedBy": "me"
+  },
+  {
+    "id": 2,
+    "title": "Title Name #2",
+    "body": "Body of post #2",
+    "postedBy": "they"
+  },
+  {
+    "id": 3,
+    "title": "Title Name #3",
+    "body": "Body of post #3",
+    "postedBy": "you"
+  },
+  {
+    "id": 3,
+    "title": "Title Name #4",
+    "body": "Body of post #4",
+    "postedBy": "him"
+  }
+]

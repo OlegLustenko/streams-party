@@ -11,5 +11,9 @@
     "arrowParens": "always",
     "bracketSpacing": false,
     "trailingComma": "all"
+  },
+  "dependencies": {
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
   }
 }
