@@ -19,9 +19,6 @@ app.use(parseVideosFromPlaylistMiddleware);
 //     ytdl(video.url).pipe(fs.createWriteStream('./' + video.title));
 //   });
 // });
-const bigData = [];
-<MyAwesomeComponent superResponsibleProp={bigData} />
-
 
 function getFilesizeInBytes(filename) {
   const stats = fs.statSync(filename);
@@ -35,7 +32,7 @@ app.use('/get-playlist-videos', (req, res, next) => {
 
   videosFromPlaylist.forEach((youtube) => {
     const video = ytdl(youtube.url);
-    video.pipe(fs.createWriteStream(`./javascript-core-course/${youtube.title}.mp4`));
+    video.pipe(fs.createWriteStream(`./static-download-folder/${youtube.title}.mp4`));
     video.once('response', () => {
       starttime = Date.now();
     });

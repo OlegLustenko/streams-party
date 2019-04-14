@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const playlistUrl = 'https://www.youtube.com/playlist?list=PLQIhGrdan_s0gTbw6BAK__yW5_Z9YnxfY';
+const playlistUrl = 'https://www.youtube.com/playlist?list=PLLt67_3G1id5v131NtM6pZ6wfcHuq1WGi';
 const baseURL = 'https://www.youtube.com/watch?v=';
 
 const parseVideosFromPlaylistMiddleware = async (request, response, next) => {
@@ -12,9 +12,12 @@ const parseVideosFromPlaylistMiddleware = async (request, response, next) => {
   const videosFromPlaylist = [];
   for (let i = 0; i < trs.length; i++) {
     const videoMetaData = trs.eq(i).attr();
+    if (videoMetaData['data-title'].includes('Sadko')) {
+      continue;
+    }
     videosFromPlaylist.push({
       url: baseURL + videoMetaData['data-video-id'],
-      title: videoMetaData['data-title'],
+      title: videoMetaData['data-title'].replace(/ /g, '-').replace(/\//g, '-'),
     });
     /*
       {
